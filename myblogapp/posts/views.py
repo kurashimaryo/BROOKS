@@ -48,10 +48,8 @@ def jlist(request):
     return render(request, 'posts/jlist.html',param)
 
 def wantlist(request):
-    param = {
-            'msg' :'やりたい案件一覧画面',
-            }
-    return render(request, 'posts/wantlist.html',param)
+    posts2 = post.objects.order_by('-published')
+    return render(request, 'posts/wantlist.html',{'posts2': posts2})
 
 def makeprof(request):
     param = {
