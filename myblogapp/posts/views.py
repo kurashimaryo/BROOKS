@@ -7,9 +7,9 @@ def index (request):
      posts = post.objects.order_by('-published')
      return render(request, 'posts/index.html', {'posts': posts})
 
-def post_detail(request,post_id):
+def detailpj(request,post_id):
     post1 = get_object_or_404(post, pk=post_id)
-    return render(request, 'posts/post_detail.html', {'post2': post1})
+    return render(request, 'posts/detailpj.html', {'post2': post1})
 
 def yourprof(request):
     param = {

@@ -31,16 +31,15 @@
 <div class="container">
  <h1 class="text-center">メイン画面</h1>
     <a href="{% url 'mypage' %}">マイページ</a>
-    <a href="{% url 'yourprof' %}">相手のプロフィール画面</a>
     <br /><br />
     {% load static %}
     <img src="{% static 'posts/キャプチャ.PNG'%}" class = "img-fluid rounded" style="max-height: 200px;" />
 
-    <h3>最新の投稿</h3>
+    <h3>案件一覧</h3>
 
     {% for post2 in posts.all %}
 
-      <a href ="{% url 'post_detail' post2.id %}">{{ post2.title }}</a>
+      <a href ="{% url 'detailpj' post2.id %}">{{ post2.title }}</a>
       <br></br>
       {{ post2.published }}
       <br></br>

@@ -8,11 +8,11 @@
   <body>
     <h1>MyPage</h1>
     <p>成功</p>
-    <p><a href="makepj.html">案件作成画面</a></p>
-    <p><a href="jlist.html">受注者候補一覧</a></p>
-    <p><a href="wantlist.html">やりたい案件市平</a></p>
-    <p><a href="makeprof.html">プロフィール作成画面</a></p>
-    <p><a href="jhlist.html">受発注一覧</a></p>
+    <p><a href="{% url 'makepj' %}">案件作成画面</a></p>
+    <p><a href="{% url 'jlist' %}">受注者候補一覧</a></p>
+    <p><a href="{% url 'wantlist' %}">やりたい案件一覧</a></p>
+    <p><a href="{% url 'makeprof' %}">プロフィール作成画面</a></p>
+    <p><a href="{% url 'jhlist' %}">受発注一覧</a></p>
     
 
   </body>
